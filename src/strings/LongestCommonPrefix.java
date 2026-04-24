@@ -15,7 +15,9 @@ public class LongestCommonPrefix {
 
         for (int i = 1; i < str.length; i++) {
 
-            while (str[i].indexOf(prefix) != 0) {
+           // "flaw".indexOf("flow") retun   //both lenth have same ,return -1
+
+            while (str[i].indexOf(prefix) != 0) {  //prefix.length() is reducing
                 prefix = prefix.substring(0, prefix.length() - 1);
 
                 if (prefix.isEmpty()) {

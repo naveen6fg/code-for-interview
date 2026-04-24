@@ -11,19 +11,19 @@ public class BinarySearchForSortedArray {
 
 	private static int binarySearch(int[] arr, int target) {
 
-		int start = 0;
+		int left = 0;
 		int end = arr.length - 1;
 
-		while (start < end) {
+		while (left <= end) {
 
-			int mid =  (start + end) / 2;
+			int mid =  (left + end) / 2;
 
 			if (arr[mid] == target) {
 				return mid;
 			}
 			
 			if (arr[mid] < target) {
-				start = mid + 1;
+				left = mid + 1;
 			} else {
 				end = mid - 1;
 			}

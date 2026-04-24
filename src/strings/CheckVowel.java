@@ -31,5 +31,8 @@ public class CheckVowel {
 //        ORDER BY empSal DESC
 //        LIMIT 1 OFFSET 4;
 
+
+      Long count =   str.chars().mapToObj(ch->(char)ch).filter(ch->String.valueOf(ch).matches("[aeiou]")).count();
+        System.out.println("Count : "+count);
     }
 }

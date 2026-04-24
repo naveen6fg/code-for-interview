@@ -3,23 +3,23 @@ package two.pointer;
 public class TwoSum {
     public static void main(String[] args) {
 
-        int[] arr ={2, 6, 7, 23, 17, 19};
-        int left =0;
-        int right = arr.length-1;
-        int sum = 26;
-        while (left<right){
-            int target = arr[left]+arr[right];
-            if(target==sum){
-                System.out.println(arr[left]+"=="+arr[right]);
+        int[] arr = {2, 6, 7, 12, 17, 19};
+        int left = 0;
+        int right = arr.length - 1;
+        int target = 26;
+
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+
+            if (sum==target) {
+                System.out.println(arr[left] + "==" + arr[right]);
                 return;
-            } else if (left<right) {
+            } else if (sum < target) {
                 left++;
-            } else if (left>right) {
+            } else
                 right--;
             }
         }
 
 
-
-    }
 }
